@@ -1,0 +1,10 @@
+---
+- name: This is my first play
+  hosts: all
+  remote_user: jenkins
+  become: true
+  tasks:
+  - name: Copy the files from the master server to clients
+    copy: src=motd dest=/root
+  - name: To copy contents to the destination file.
+    copy: content="This is my ansible copy module" dest=/home/ansible/myfile.txt mode=755 owner=root group=root
