@@ -1,7 +1,7 @@
 ---
 - name: This is my first play
   hosts: all
-  remote_user: jenkins
+  remote_user: ansible
   become: true
   tasks:
   - name: Copy the files from the master server to clients
